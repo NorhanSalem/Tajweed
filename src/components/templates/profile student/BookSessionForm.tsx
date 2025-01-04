@@ -104,146 +104,144 @@ function BookSessionForm({
         }}
       >
         {({ setFieldValue, values }) => (
-          <Form className="dark:bg-[#1E1E2D] rtl:text-right">
-            <InnerFormLayout
-              customStyle="p-8"
-              title={t("Book a class")}
-              showpopuptitle={true}
-            >
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-                <div className="col-span-3">
-                  <DatePicker
-                    locale={t("ar")}
-                    className="border p-2 rounded-lg dark:bg-dark-primary mx-auto w-fit"
-                    id="dates"
-                    placeholder={t("Select dates")}
-                    type="multiple"
-                    onChange={(dates) => setFieldValue("dates", dates)}
-                    value={values.dates}
-                    minDate={new Date()}
-                    styles={{
-                      day: {
-                        "&[data-selected], &[data-selected]:hover": {
-                          backgroundColor: `#11897d`,
-                          color: "white",
-                        },
+          <InnerFormLayout
+            customStyle="p-8"
+            title={t("Book a class")}
+            showpopuptitle={true}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+              <div className="col-span-3">
+                <DatePicker
+                  locale={t("ar")}
+                  className="border p-2 rounded-lg dark:bg-dark-primary mx-auto w-fit"
+                  id="dates"
+                  placeholder={t("Select dates")}
+                  type="multiple"
+                  onChange={(dates) => setFieldValue("dates", dates)}
+                  value={values.dates}
+                  minDate={new Date()}
+                  styles={{
+                    day: {
+                      "&[data-selected], &[data-selected]:hover": {
+                        backgroundColor: `#11897d`,
+                        color: "white",
                       },
-                    }}
-                  />
-                </div>
-                <div className="col-span-3 flex flex-col gap-4">
-                  <div>
-                    <Label
-                      htmlFor="teacher"
-                      className="mb-2 hidden md:block text-center"
-                    >
-                      {t("Book a class")}
-                    </Label>
-                    <div className="flex items-center">
-                      <AsyncPaginate
-                        className="w-full"
-                        loadingMessage={() =>
-                          isTeacherOptionsLoading ? (
-                            <Loader size="sm" className="mx-auto" />
-                          ) : (
-                            ""
-                          )
-                        }
-                        noOptionsMessage={() => <span>{t("No options")}</span>}
-                        id="teacher"
-                        placeholder={firstTeacherLabel || t("Teacher")}
-                        loadOptions={loadTeacherOptions}
-                        onChange={(option) =>
-                          setFieldValue("teacher_id", option.value)
-                        }
-                        additional={{ page: 1 }}
-                        debounceTimeout={300}
-                      />
-                      <div>{isTeacherOptionsLoading ? <Spinner /> : ""}</div>
-                    </div>
-                  </div>
-
-                  <div className="">
-                    <TimePicker
-                      name="time"
-                      label=""
-                      onChange={(time) => setFieldValue("time", time)}
-                    />
-                  </div>
-
-                  <div className="w-full">
-                    <Select
-                      placeholder={t("duration")}
-                      id="duration"
-                      name="duration"
-                      loadingPlaceholder={t("loading")}
-                      options={[
-                        { label: "30", value: 30 },
-                        { label: "60", value: 60 },
-                        { label: "90", value: 90 },
-                        { label: "120", value: 120 },
-                        { label: "150", value: 150 },
-                      ]}
-                      onChange={(option) =>
-                        setFieldValue("duration", option?.value)
-                      }
-                      labelStyle="lg:flex-col"
-                      style="w-full"
-                      required
-                    />
-                    <Button
-                      type="submit"
-                      disabled={submitFormLoading}
-                      className="mx-auto mt-5 block"
-                    >
-                      {t("Confirm")}
-                    </Button>
-                  </div>
-                </div>
-                <div className="col-span-3 ">
+                    },
+                  }}
+                />
+              </div>
+              <div className="col-span-3 flex flex-col gap-4">
+                <div>
                   <Label
-                    htmlFor="add-balance"
+                    htmlFor="teacher"
                     className="mb-2 hidden md:block text-center"
                   >
-                    {t("Add balance")}
+                    {t("Book a class")}
                   </Label>
-                  <div className="lg:w-full ">
-                    <BaseInputField
-                      id="name"
-                      name="wallet"
-                      type="text"
-                      placeholder={`${t("Balance")}`}
-                      labelProps={{ className: "mb-1 " }}
-                      className="mb-3 w-[10.5rem]"
-                      required
+                  <div className="flex items-center">
+                    <AsyncPaginate
+                      className="w-full"
+                      loadingMessage={() =>
+                        isTeacherOptionsLoading ? (
+                          <Loader size="sm" className="mx-auto" />
+                        ) : (
+                          ""
+                        )
+                      }
+                      noOptionsMessage={() => <span>{t("No options")}</span>}
+                      id="teacher"
+                      placeholder={firstTeacherLabel || t("Teacher")}
+                      loadOptions={loadTeacherOptions}
+                      onChange={(option) =>
+                        setFieldValue("teacher_id", option.value)
+                      }
+                      additional={{ page: 1 }}
+                      debounceTimeout={300}
                     />
-                  </div>
-                  <div className="w-full">
-                    <TextAreaField
-                      label=" "
-                      name="reason"
-                      id="reason"
-                      placeholder={`${t("Add reason")}`}
-                      rows={3}
-                    />
-                    <Button
-                      type="submit"
-                      disabled={submitFormLoading}
-                      className="mx-auto mt-5 block"
-                    >
-                      {t("submit")}
-                    </Button>
+                    <div>{isTeacherOptionsLoading ? <Spinner /> : ""}</div>
                   </div>
                 </div>
-                <div className="col-span-3">
-                  <SubscribeToPackageForm
-                    studentId={studentId}
-                    closeModal={closeModal}
+
+                <div className="">
+                  <TimePicker
+                    name="time"
+                    label=""
+                    onChange={(time) => setFieldValue("time", time)}
                   />
                 </div>
+
+                <div className="w-full">
+                  <Select
+                    placeholder={t("duration")}
+                    id="duration"
+                    name="duration"
+                    loadingPlaceholder={t("loading")}
+                    options={[
+                      { label: "30", value: 30 },
+                      { label: "60", value: 60 },
+                      { label: "90", value: 90 },
+                      { label: "120", value: 120 },
+                      { label: "150", value: 150 },
+                    ]}
+                    onChange={(option) =>
+                      setFieldValue("duration", option?.value)
+                    }
+                    labelStyle="lg:flex-col"
+                    style="w-full"
+                    required
+                  />
+                  <Button
+                    type="submit"
+                    disabled={submitFormLoading}
+                    className="mx-auto mt-5 block"
+                  >
+                    {t("Confirm")}
+                  </Button>
+                </div>
               </div>
-            </InnerFormLayout>
-          </Form>
+              <div className="col-span-3 ">
+                <Label
+                  htmlFor="add-balance"
+                  className="mb-2 hidden md:block text-center"
+                >
+                  {t("Add balance")}
+                </Label>
+                <div className="lg:w-full ">
+                  <BaseInputField
+                    id="name"
+                    name="wallet"
+                    type="text"
+                    placeholder={`${t("Balance")}`}
+                    labelProps={{ className: "mb-1 " }}
+                    className="mb-3 w-[10.5rem]"
+                    required
+                  />
+                </div>
+                <div className="w-full">
+                  <TextAreaField
+                    label=" "
+                    name="reason"
+                    id="reason"
+                    placeholder={`${t("Add reason")}`}
+                    rows={3}
+                  />
+                  <Button
+                    // type="submit"
+                    disabled={submitFormLoading}
+                    className="mx-auto mt-1 block"
+                  >
+                    {t("submit")}
+                  </Button>
+                </div>
+              </div>
+              <div className="col-span-3">
+                <SubscribeToPackageForm
+                  studentId={studentId}
+                  closeModal={closeModal}
+                />
+              </div>
+            </div>
+          </InnerFormLayout>
         )}
       </Formik>
     </>

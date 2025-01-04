@@ -73,9 +73,7 @@ export default function DetailsAllSessionStudents({
     let columns = [
       {
         header: "#",
-        cell: (info) => (
-          <span>{indexTable(info?.row?.index, page)}</span>
-        ),
+        cell: (info) => <span>{indexTable(info?.row?.index, page)}</span>,
         accessorKey: "id",
       },
       {
@@ -358,12 +356,12 @@ export default function DetailsAllSessionStudents({
                   >
                     <WalletStudent setModel={setIsOpenW} studentId={id} />
                   </Modal>
-                  <button
+                  {/* <button
                     className="hover:text-black border-black border p-3 rounded-lg"
                     onClick={() => setIsOpenW(true)}
                   >
                     {t("Charge the wallet")}
-                  </button>
+                  </button> */}
                 </div>
 
                 <div></div>
@@ -380,12 +378,12 @@ export default function DetailsAllSessionStudents({
                     closeModal={closeModal}
                   />
                 </Modal>
-                <button
+                {/* <button
                   className="hover:text-black border-black border p-3 rounded-lg"
                   onClick={() => setIsOpenS(true)}
                 >
                   {t("Pick a package")}
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
@@ -472,7 +470,6 @@ export default function DetailsAllSessionStudents({
                   setOpenModal={setOpenModal}
                 />
               </ModalTemplate>
-              
             </div>
             <ReportModal
               isOpen={openReport}

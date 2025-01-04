@@ -1,8 +1,12 @@
 /////////// IMPORTS
 ///
-import { FormikSharedConfig, useFormikContext } from "formik"
-import { t } from "i18next"
-import { BaseInputField, InnerFormLayout, TextAreaField } from "../../molecules"
+import { FormikSharedConfig, useFormikContext } from "formik";
+import { t } from "i18next";
+import {
+  BaseInputField,
+  InnerFormLayout,
+  TextAreaField,
+} from "../../molecules";
 ///
 /////////// Types
 ///
@@ -28,7 +32,7 @@ export const WalletMainData = ({
   ///
   /////////// STATES
   ///
-  const { setFieldValue, values } = useFormikContext<FormikSharedConfig>()
+  const { setFieldValue, values } = useFormikContext<FormikSharedConfig>();
 
   ///
   /////////// SIDE EFFECTS
@@ -48,7 +52,7 @@ export const WalletMainData = ({
       <div>
         <InnerFormLayout
           showpopuptitle={hideHeader ? false : true}
-          title={`${t("Add balance")}`}
+          title={`${t("Add ")}`}
           // layoutStyle="p"
           // customStyle="p-4"
         >
@@ -77,5 +81,5 @@ export const WalletMainData = ({
         </InnerFormLayout>
       </div>
     </>
-  )
-}
+  );
+};

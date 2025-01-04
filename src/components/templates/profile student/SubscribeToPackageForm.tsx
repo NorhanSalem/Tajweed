@@ -146,7 +146,7 @@ function SubscribeToPackageForm({
             <Button
               type="submit"
               disabled={submitFormLoading}
-              className="mx-auto mt-5 block"
+              className="mx-auto mt-6 block"
             >
               {t("Confirm")}
             </Button>
