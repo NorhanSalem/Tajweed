@@ -1,0 +1,152 @@
+@media (max-width: 1070px) {
+  .breadcrumbs-styleing {
+    display: none !important;
+  }
+}
+@media (max-width: 991px) {
+  [dir="rtl"] .css-dip3t8,
+  .css-7onajn {
+    transform: translateX(100%);
+  }
+
+  .collapsed-button-sidebar {
+    display: none !important;
+  }
+
+  [dir="ltr"] .css-dip3t8,
+  .css-7onajn {
+    transform: translateX(-100%);
+  }
+
+  [dir="ltr"] .main-page {
+    left: 0 !important;
+  }
+
+  .genral-main {
+    width: 100% !important;
+    right: 0 !important;
+  }
+
+  [drawer-aside-bar="on"] .css-dip3t8,
+  [drawer-aside-bar="on"] .css-7onajn {
+    transform: translateX(100%);
+    transform: none !important;
+  }
+
+  .css-dip3t8 {
+    padding: 0 !important;
+  }
+
+  .css-7onajn {
+    border-left-width: 0 !important;
+  }
+
+  .css-7onajn,
+  .css-dip3t8 {
+    z-index: 1200 !important;
+  }
+
+  .sidebar_mobile_toggle {
+    display: block !important;
+  }
+
+  .show-hide-pass {
+    left: 7% !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .upload__image-wrapper {
+    width: 50% !important;
+  }
+  .styleing-modal-info {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (min-width: 790) {
+  .styleing-modal-info {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-templete-style {
+    margin-top: 4rem !important;
+  }
+
+  .login-page::before {
+    background: none !important;
+  }
+
+  .login-page .content {
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin-top: 1rem;
+  }
+
+  .login-page .logo-in-top {
+    clip-path: none !important;
+    border: none !important;
+    background-color: transparent !important;
+  }
+
+  .DateRangePickerHomePage
+    div
+    > div:nth-child(2)
+    > div
+    > div
+    > div
+    > div:first-child {
+    display: none !important;
+  }
+
+  .DateRangePickerHomePage
+    div
+    > div:nth-child(2)
+    > div
+    > div
+    > div
+    > div:last-child {
+    flex-direction: column !important;
+  }
+}
+
+@media (max-width: 530px) {
+  .general-setting-style {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .image-logo-site {
+    display: none !important;
+  }
+
+  .upload__image-wrapper {
+    width: 100% !important;
+  }
+  .user-info-navbar {
+    display: none;
+  }
+
+  .styleing-modal-info {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .DateRangePickerHomePage
+    div
+    > div:nth-child(2)
+    > div
+    > div
+    > div:first-child {
+    order: 3 !important;
+  }
+  .DateRangePickerHomePage div > div:nth-child(2) > div > div {
+    flex-direction: column !important;
+  }
+
+  .DateRangePickerHomePage div > div:nth-child(2) > div > div:nth-child(3) {
+    order: 1 !important;
+  }
+}

@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  app:
+    image: "node:18-alpine3.17"
+    container_name: "quran-courses"
+    working_dir: "/app"
+    ports:
+      - "8013:3000"
+    volumes:
+      - '.:/app'
+    command: [ "npm","run","start" ]
