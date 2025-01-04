@@ -10,7 +10,9 @@
     "start": "serve dist --single",
     "vanilla-build": "vite build",
     "preview": "vite preview",
-    "force-start": "TSX_COMPILE_ON_ERROR=true ESLINT_NO_DEV_ERRORS=true react-scripts start"
+    "force-start": "TSX_COMPILE_ON_ERROR=true ESLINT_NO_DEV_ERRORS=true react-scripts start",
+    "lint": "eslint .",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@ahmedhassan713/object-2-formdata": "^1.0.2",
@@ -20,10 +22,10 @@
     "@emotion/react": "^11.11.1",
     "@headlessui/react": "^1.7.13",
     "@inovua/reactdatagrid-community": "^5.8.5",
-    "@mantine/core": "^6.0.15",
-    "@mantine/dates": "6.0.15",
+    "@mantine/core": "6.0.22",
+    "@mantine/dates": "6.0.22",
+    "@mantine/modals": "6.0.22",
     "@mantine/hooks": "^6.0.15",
-    "@mantine/modals": "^6.0.16",
     "@react-pdf-viewer/core": "3.11.0",
     "@react-pdf-viewer/default-layout": "^3.11.0",
     "@react-pdf-viewer/locales": "^1.0.0",
@@ -104,8 +106,5 @@
     "tailwindcss-rtl": "^0.9.0",
     "typescript": "^4.9.3",
     "vite": "^4.1.0"
-  },
-  "engines": {
-    "node": "18.x"
   }
 }
