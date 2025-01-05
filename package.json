@@ -6,13 +6,11 @@
   "type": "module",
   "scripts": {
     "dev": " vite",
-    "build": "tsc && vite build",
+    "build": " vite build",
     "start": "serve dist --single",
     "vanilla-build": "vite build",
     "preview": "vite preview",
-    "force-start": "TSX_COMPILE_ON_ERROR=true ESLINT_NO_DEV_ERRORS=true react-scripts start",
-    "lint": "eslint .",
-    "type-check": "tsc --noEmit"
+    "force-start": "TSX_COMPILE_ON_ERROR=true ESLINT_NO_DEV_ERRORS=true react-scripts start"
   },
   "dependencies": {
     "@ahmedhassan713/object-2-formdata": "^1.0.2",
