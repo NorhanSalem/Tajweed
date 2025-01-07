@@ -177,7 +177,7 @@ const ControllerChat = ({
     console.log("sendAdminMessage", data);
 
     //@ts-ignore
-    if(data?.message_type !== "text") {
+    if (data?.message_type !== "text") {
       socket.emit("sendAdminMessage", {
         user_id: userId,
         message: data?.message,

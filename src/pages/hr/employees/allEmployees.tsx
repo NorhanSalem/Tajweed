@@ -182,7 +182,7 @@ function Employees({ title }: AllEmployees_TP) {
     [currentLang, page]
   );
   const queryParams = {
-    status:  status ,
+    status: status,
     page: page,
     date_range: dateFilter,
     pagenate: pagePagination,
@@ -212,7 +212,7 @@ function Employees({ title }: AllEmployees_TP) {
       refetch();
     },
     onError: (err) => {
-      notify("error",err?.response?.data?.message);
+      notify("error", err?.response?.data?.message);
     },
     method: "delete",
     formData: true,

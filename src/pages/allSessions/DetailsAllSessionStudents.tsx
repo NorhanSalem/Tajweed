@@ -117,7 +117,7 @@ export default function DetailsAllSessionStudents({
       },
       {
         header: `${t("Student Chat")}`,
-        cell: (info) => <ChatUserTable id={info.row.original?.student_id} />,
+        cell: (info) => <UserTable id={info.row.original?.student_id} />,
         accessorKey: "chat",
       },
       {

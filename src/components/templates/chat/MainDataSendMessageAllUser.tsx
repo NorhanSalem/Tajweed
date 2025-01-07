@@ -1,10 +1,6 @@
 import { useFormikContext } from "formik";
 import { t } from "i18next";
-import {
-  InnerFormLayout,
-  Radio,
-  TextAreaField
-} from "../../molecules";
+import { InnerFormLayout, Radio, TextAreaField } from "../../molecules";
 import SelectStudent from "../../molecules/Select/SelectStudent";
 import SelectTeacher from "../../molecules/Select/SelectTeacher";
 import { DropFile } from "../../molecules/files/DropFile";
@@ -36,7 +32,6 @@ function MainDataSendMessageAllUser() {
                 setFieldValue("message_type", "image");
               }}
             />
-    
           </div>
           <div className="col-span-12 md:col-span-6">
             <SelectTeacher

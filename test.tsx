@@ -1,4 +1,5 @@
-{dataHome?.data?.map((item) => (
+{
+  dataHome?.data?.map((item) => (
     <div className="col-span-12 sm:col-span-12 md:col-span-6 xl:col-span-4 2xl:col-span-3">
       <div
         className={`home-cards ${
@@ -100,9 +101,7 @@
                   </>
                 )}
               </div>
-              {item?.non_egyptians && (
-                <small>{item?.non_egyptians}</small>
-              )}
+              {item?.non_egyptians && <small>{item?.non_egyptians}</small>}
             </div>
             {/* إجمالي الجلسات  المنهية */}
             {item?.kay == "الجلسات" && (
@@ -162,9 +161,7 @@
                   {item?.finished >= 0 && (
                     <>
                       <p className="bg-red-500 w-1 h-1 p-1 rounded-full m-0 "></p>
-                      <small>
-                        {t("Total successful subscriptions")}
-                      </small>
+                      <small>{t("Total successful subscriptions")}</small>
                     </>
                   )}
                 </div>
@@ -195,9 +192,7 @@
                 )}
               </div>
 
-              {item?.in_progress >= 0 && (
-                <small>{item?.in_progress}</small>
-              )}
+              {item?.in_progress >= 0 && <small>{item?.in_progress}</small>}
             </div>
             {/* عدد الذكور */}
             <div className="flex justify-between">
@@ -296,9 +291,7 @@
                 )}
               </div>
               {item?.total_all?.free_canceled && (
-                <small>
-                  {item?.total_all?.free_canceled?.toFixed(1)}
-                </small>
+                <small>{item?.total_all?.free_canceled?.toFixed(1)}</small>
               )}
             </div>
             {/* إجمالي المصروفات */}
@@ -328,9 +321,7 @@
                 )}
               </div>
               {item?.total_all?.daily_expenses >= 0 && (
-                <small>
-                  {item?.total_all?.daily_expenses.toFixed(1)}
-                </small>
+                <small>{item?.total_all?.daily_expenses.toFixed(1)}</small>
               )}
             </div>
             {/*   إجمالي الإيرادات   */}
@@ -360,16 +351,11 @@
                 )}
               </div>
               {item?.total_all?.daily_revenues >= 0 && (
-                <small>
-                  {item?.total_all?.daily_revenues.toFixed(1)}
-                </small>
+                <small>{item?.total_all?.daily_revenues.toFixed(1)}</small>
               )}
             </div>
             {item?.data
-              ?.slice(
-                0,
-                item.kay === nameShowItem ? item.data.length : 5
-              )
+              ?.slice(0, item.kay === nameShowItem ? item.data.length : 5)
               .map((child, index) => (
                 <div key={index} className="flex justify-between">
                   <div className="text-lightGreen flex items-center gap-1">
@@ -393,9 +379,7 @@
                   className="text-red-500 text-xs"
                   onClick={() => show(item.kay)}
                 >
-                  {item.kay == nameShowItem
-                    ? t("Show less")
-                    : t("Show more")}
+                  {item.kay == nameShowItem ? t("Show less") : t("Show more")}
                 </button>
               </div>
             )}
@@ -403,4 +387,5 @@
         </div>
       </div>
     </div>
-  ))}
+  ));
+}

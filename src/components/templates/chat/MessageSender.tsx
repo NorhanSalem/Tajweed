@@ -2,7 +2,8 @@ import { t } from "i18next";
 import Seen from "../../../assets/DoubleTick.svg";
 import Unseen from "../../../assets/unseen.svg";
 // import "lightbox.js-react/dist/index.css";
-import { SlideshowLightbox,} from "lightbox.js-react";
+import { SlideshowLightbox } from "lightbox.js-react";
+import { RiShareForwardLine } from "react-icons/ri";
 const MessageSender = ({
   image,
   message,
@@ -20,7 +21,7 @@ const MessageSender = ({
           alt="user"
           className="w-10 h-10 object-cover rounded-full"
         />
-        <div className="bg-[#F1FAFF] p-3 rounded-lg dark:bg-[#607d8b7d] dark:text-white ">
+        <div className="bg-[#1e5c37] text-white p-3 rounded-lg dark:bg-[#607d8b7d] dark:text-white ">
           <div
             style={{ wordBreak: "break-word", whiteSpace: "pre-line" }}
             className={`${
@@ -53,6 +54,10 @@ const MessageSender = ({
             <span className="dark:text-white">{time} {send_at_mop} </span>
           </div> */}
         </div>
+        <RiShareForwardLine
+          size={20}
+          className="h-full flex items-center justify-center cursor-pointer hover:text-[#8f9995]"
+        />
       </div>
       {/* <div className="col-span-12 mr-[54px] -mt-[28px] !text-[11px] text-right dark:text-white block rtl:text-left  text-sm">
         {is_read === 1 ? t("Seen") : t("Not seen")}

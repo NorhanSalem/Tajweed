@@ -52,7 +52,7 @@ function Chats({
               isPending
                 ? "pending"
                 : isActive
-                ? "bg-[#F8F5FF] dark:bg-[#607d8b7d]"
+                ? "bg-[#dde9e2] dark:bg-[#607d8b7d]"
                 : ""
             }`
           }

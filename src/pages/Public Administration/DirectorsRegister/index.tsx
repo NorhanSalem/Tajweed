@@ -99,7 +99,6 @@ function DirectorsRegister({ title }: DirectorsRegister_TP) {
         accessorKey: "last_update_at",
       },
 
-
       {
         header: `${t("action")}`,
         cell: (info) => (

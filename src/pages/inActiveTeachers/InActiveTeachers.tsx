@@ -430,7 +430,7 @@ function InActiveTeachers({ title }: InActiveTeachers_TP) {
         accessorKey: "last_update",
       },
       {
-        header: `${t("last update Date")}`,
+        header: `${t("")}`,
         cell: (info) => info.renderValue(),
         accessorKey: "last_update",
       },

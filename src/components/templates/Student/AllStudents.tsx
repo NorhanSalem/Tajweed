@@ -84,7 +84,7 @@ function AllStudents({ title }: AllStudents_TP) {
         ),
         accessorKey: "name",
       },
-       {
+      {
         header: `${t("Gender")}`,
         cell: (info) => info.renderValue(),
         accessorKey: "gender",
@@ -174,6 +174,23 @@ function AllStudents({ title }: AllStudents_TP) {
         header: `${t("Upcoming classes")}`,
         cell: (info) => info.renderValue(),
         accessorKey: "student_profile.total_incomming",
+      },
+      {
+        header: `${t("login from")}`,
+        cell: (info) => (
+          <div className="flex gap-1 justify-evenly">
+            <span
+              className={` p-2 rounded-md text-white ${
+                info.row.original?.loginType?.type === "web"
+                  ? "bg-[#5cb85c]"
+                  : "bg-[#5c9bb8]"
+              } `}
+            >
+              {info.row.original?.loginType?.type}
+            </span>
+          </div>
+        ),
+        accessorKey: "login_from",
       },
       {
         header: `${t("Class")}`,

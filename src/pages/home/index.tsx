@@ -134,16 +134,16 @@ export const Home = ({ title }: HomeProps_TP) => {
                       <FaUserGraduate className="text-mainBlue text-[20px] dark:!text-white" />
                     )}
                     {item?.slug === "Paid_packages" && (
-                       <FaMoneyBillWave className="text-mainBlue text-[20px] dark:!text-white" />
+                      <FaMoneyBillWave className="text-mainBlue text-[20px] dark:!text-white" />
                     )}
                     {item?.slug === "Revenues" && (
-                       <FaMoneyBillWave className="text-mainBlue text-[20px] dark:!text-white" />
+                      <FaMoneyBillWave className="text-mainBlue text-[20px] dark:!text-white" />
                     )}
                     {item?.slug === "Pending_Qurancourses_debits" && (
                       <FaMoneyBillWave className="text-mainBlue text-[20px] dark:!text-white" />
                     )}
                     {item?.slug === "Expenses" && (
-                     <FaMoneyBillWave className="text-mainBlue text-[20px] dark:!text-white" />
+                      <FaMoneyBillWave className="text-mainBlue text-[20px] dark:!text-white" />
                     )}
                     {item?.slug === "Rush_hours" && (
                       <FaClock className="text-mainBlue text-[20px] dark:!text-white" />
@@ -431,7 +431,7 @@ export const Home = ({ title }: HomeProps_TP) => {
                         <small>{item?.total_all?.revenues.toFixed(1)}</small>
                       )}
                     </div>
-                    
+
                     {/*  إجمالي الإيرادات اليومية  */}
                     <div className="flex justify-between">
                       <div className="text-lightGreen flex items-center gap-1">

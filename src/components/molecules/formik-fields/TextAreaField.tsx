@@ -11,6 +11,7 @@ export const TextAreaField = ({
   id,
   required,
   style,
+  labelStyle,
   ...props
 }: {
   label: string;
@@ -18,6 +19,7 @@ export const TextAreaField = ({
   name: string;
   placeholder: string;
   style?: string;
+  labelStyle?: string;
 } & TextAreaInputProp_TP) => {
   const { setFieldValue, setFieldTouched, errors, touched, values } =
     useFormikContext<{
@@ -25,7 +27,7 @@ export const TextAreaField = ({
     }>();
   return (
     <div className="col-span-1">
-      <Label htmlFor={id} required={required}>
+      <Label htmlFor={id} required={required} className={labelStyle}>
         {label}
       </Label>
       <TextAreaInput

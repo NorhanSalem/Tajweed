@@ -23,6 +23,7 @@ import { useFetch, useMutate } from "../../../hooks";
 import i18n from "../../../i18n";
 import { pagePaginate } from "../../../utils/helpers";
 import { notify } from "../../../utils/toast";
+import { LoginForm } from "../../../components/templates/login/LoginForm";
 
 export type AllTeachers = {
   id: string;
@@ -300,6 +301,23 @@ function AllTeachers({ title }: AllTeachers_TP) {
       {
         header: `${t("last update Date")}`,
         cell: (info) => <div>{info.row.original?.last_update?.update_at}</div>,
+        accessorKey: "last_update.update_at",
+      },
+      {
+        header: `${t("login from ")}`,
+        cell: (info) => (
+          <div className="flex gap-1 justify-evenly">
+            <span
+              className={` p-2 rounded-md text-white ${
+                info.row.original?.loginType?.type === "web"
+                  ? "bg-[#5cb85c]"
+                  : "bg-[#5c9bb8]"
+              } `}
+            >
+              {info.row.original?.loginType?.type}
+            </span>
+          </div>
+        ),
         accessorKey: "last_update.update_at",
       },
     ],
