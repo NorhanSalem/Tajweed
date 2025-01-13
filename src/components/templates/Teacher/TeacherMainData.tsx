@@ -45,7 +45,7 @@ export const TeacherMainData = ({
             type="text"
             placeholder={`${t("name")}`}
             labelProps={{ className: "mb-1" }}
-            className="mb-3 w-[18rem] input-style-maining"
+            className="mb-3 w-[18rem] lg:w-full input-style-maining"
             style={{ marginTop: "0.25rem" }}
             labelStyle="lg:inline lg:mr-10"
             required
@@ -57,8 +57,8 @@ export const TeacherMainData = ({
             type="email"
             placeholder={`${t("Email")}`}
             labelProps={{ className: "mb-1" }}
-            className="  w-[18rem] input-style-maining"
-            labelStyle="lg:inline lg:mr-10"
+            className="  w-[18rem] lg:w-full input-style-maining"
+            labelStyle="lg:inline lg:mr-12"
             required
           />
           <PhoneInput2 label={`${t("mobile")}`} name="phone" />
@@ -68,7 +68,8 @@ export const TeacherMainData = ({
             onChange={(option) => {
               setFieldValue("country_id", option.value);
             }}
-            style="lg:ml-5 lg:w-[24.5rem] w-[18rem]"
+            style="lg:ml-5 lg:w-[27rem] xl:w-[55rem] w-[18rem]"
+            labelCss="lg:mr-2"
           />
           <BaseInputField
             id="meta_title_ar"
@@ -77,7 +78,7 @@ export const TeacherMainData = ({
             type="text"
             placeholder={`${t("Arabic Title")}`}
             labelProps={{ className: "mb-1" }}
-            className="mb-3 lg:w-[25rem] w-[18rem] inline-block input-style-maining"
+            className="mb-3 lg:w-full w-[18rem] inline-block input-style-maining"
             style={{ marginTop: "0.25rem" }}
             labelStyle="lg:inline lg:mr-6  "
             required
@@ -89,9 +90,9 @@ export const TeacherMainData = ({
             type="text"
             placeholder={`${t("English Title")}`}
             labelProps={{ className: "mb-1" }}
-            className="mb-3 lg:w-[25rem]  w-[18rem] inline-block input-style-maining"
+            className="mb-3 lg:w-full  w-[18rem] inline-block input-style-maining"
             style={{ marginTop: "0.25rem" }}
-            labelStyle="lg:inline lg:mr-6 "
+            labelStyle="lg:inline lg:mr-9 "
             required
           />
           <BaseInputField
@@ -101,9 +102,9 @@ export const TeacherMainData = ({
             type="text"
             placeholder={`${t("Arabic Description")}`}
             labelProps={{ className: "mb-1" }}
-            className="mb-3  lg:w-[25rem]  w-[18rem] input-style-maining"
+            className="mb-3  lg:w-full  w-[18rem] input-style-maining"
             style={{ marginTop: "0.25rem" }}
-            labelStyle="lg:inline"
+            labelStyle="lg:inline lg:mr-7"
             required
           />
           <BaseInputField
@@ -113,21 +114,19 @@ export const TeacherMainData = ({
             type="text"
             placeholder={`${t("English Description")}`}
             labelProps={{ className: "mb-1" }}
-            className="mb-3 lg:w-[24.5rem]  w-[18rem] lg:ml-1 input-style-maining"
+            className="mb-3 lg:w-full  w-[18rem] lg:ml-1 input-style-maining"
             style={{ marginTop: "0.25rem" }}
             labelStyle="inline "
             required
           />
-
           <DateInput2 label={`${t("BirthDay")}`} name="birthday" />
-
           <SelectGender
             label={`${t("Type")}`}
             name="gender"
             onChange={(option) => {
               setFieldValue("gender", option.value);
             }}
-            style="lg:ml-7 lg:w-[26rem]  w-[18rem]"
+            style="lg:ml-8 lg:w-[27rem]  w-[18rem] xl:w-[55rem] md:block"
           />
 
           <BaseInputField
@@ -137,8 +136,8 @@ export const TeacherMainData = ({
             type="password"
             placeholder={`${t("password")}`}
             labelProps={{ className: "mb-1" }}
-            className="inline-block lg:w-[25rem]  w-[18rem] input-style-maining"
-            labelStyle="lg:inline lg:mr-3 "
+            className="inline-block lg:w-full  w-[18rem] input-style-maining"
+            labelStyle="lg:inline lg:mr-2 "
             required
           />
           <BaseInputField
@@ -148,7 +147,7 @@ export const TeacherMainData = ({
             type="password"
             placeholder={`${t("Confirm Password")}`}
             labelProps={{ className: "mb-1" }}
-            className="inline-block  w-[18rem] input-style-maining"
+            className="inline-block w-[18rem] lg:w-full input-style-maining"
             style={{ marginTop: "0.25rem" }}
             labelStyle="lg:inline-block "
             required
@@ -160,7 +159,7 @@ export const TeacherMainData = ({
             onChange={(option) => {
               setFieldValue("language", option.value);
             }}
-            style="lg:ml-5 lg:w-[27rem]  w-[18rem]"
+            style="lg:ml-4 lg:w-[27rem] xl:w-[55rem] w-[18rem]"
           />
           <SelectLevelLanguage
             label={`${t("English Level")}`}
@@ -168,7 +167,7 @@ export const TeacherMainData = ({
             onChange={(option) => {
               setFieldValue("english_level", option.value);
             }}
-            style="lg:ml-8 lg:w-[27rem]  w-[18rem]"
+            style="lg:ml-7 lg:w-[27rem] xl:w-[55rem] w-[18rem]"
           />
 
           <SelectSpecialization
@@ -181,13 +180,13 @@ export const TeacherMainData = ({
               );
               setFieldValue("specialization", selectedIds);
             }}
-            style="lg:ml-7 lg:w-[26rem]  w-[18rem]"
+            style="lg:ml-7 lg:w-[26.5rem] xl:w-[55rem]  w-[18rem]"
           />
           <SelectInterviewStatus
             label={t("interview status")}
             name="interview_status"
             placeholder={t("interview status")}
-            style="lg:ml-7 lg:w-[27rem]  w-[18rem]"
+            style="lg:ml-7 lg:w-[27rem] xl:w-[55rem]  w-[18rem]"
           />
           <BaseInputField
             id="Memorized"
@@ -196,9 +195,9 @@ export const TeacherMainData = ({
             type="text"
             placeholder={`${t("Memorized Juz")}`}
             labelProps={{ className: "mb-1" }}
-            className="inline-block   w-[18rem] input-style-maining"
+            className="inline-block  lg:w-full w-[18rem] input-style-maining"
             style={{ marginTop: "0.25rem" }}
-            labelStyle="inline lg:mr-5"
+            labelStyle="inline lg:mr-4"
             required
           />
 
@@ -208,7 +207,7 @@ export const TeacherMainData = ({
             onChange={(option) => {
               setFieldValue("is_working_online", option.value);
             }}
-            style="lg:ml-7 lg:w-[27rem]  w-[18rem]"
+            style="lg:ml-7 lg:w-[27rem] xl:w-[55rem] w-[18rem]"
           />
 
           <SelectCanTeaching
@@ -221,7 +220,7 @@ export const TeacherMainData = ({
               );
               setFieldValue("teaching_fields", selectedIds);
             }}
-            style="lg:ml-8 lg:w-[27rem]  w-[18rem]"
+            style="lg:ml-6 lg:w-[27rem]  xl:w-[55rem]  w-[18rem]"
           />
 
           <SelectSpokenLanguage
@@ -235,7 +234,7 @@ export const TeacherMainData = ({
               );
               setFieldValue("spoken_languages", selectedIds);
             }}
-            style="lg:ml-7 lg:w-[27rem]  w-[18rem]"
+            style="lg:ml-7 lg:w-[27rem] xl:w-[55rem]  w-[18rem]"
           />
           <BaseInputField
             id="order"
@@ -244,7 +243,7 @@ export const TeacherMainData = ({
             type="text"
             placeholder={`${t("order")}`}
             labelProps={{ className: "mb-1" }}
-            className="inline-block   w-[18rem] lg:w-[25rem] input-style-maining"
+            className="inline-block   w-[18rem] lg:w-[27rem] input-style-maining"
             style={{ marginTop: "0.25rem" }}
             labelStyle="lg:inline lg:mr-14"
           />
@@ -255,7 +254,7 @@ export const TeacherMainData = ({
             type="text"
             placeholder={`${t("Hour Price")}`}
             labelProps={{ className: "mb-1" }}
-            className="inline-block lg:ml-6 lg:w-[25rem]  w-[18rem] input-style-maining"
+            className="inline-block lg:ml-6 lg:w-full  w-[18rem] input-style-maining"
             style={{ marginTop: "0.25rem" }}
             labelStyle="lg:inline "
           />
@@ -455,7 +454,7 @@ export const TeacherMainData = ({
               id="bio"
               name="bio"
               rows={10}
-              style="lg:w-[60rem] w-[90%]"
+              style=" xl:w-[135rem] lg:w-[70rem] md:w-[40rem] w-[90%]"
               labelStyle="lg:inline block mt-3"
             />
           </div>

@@ -34,11 +34,11 @@ const PhoneInput2 = ({ name, label }: any) => {
   };
 
   return (
-    <div className="col-span-1 lg:w-[30rem] w-[17rem]">
+    <div className="col-span-1 lg:w-[32.5rem] 2xl:w-[60rem] xl:w-[32.5rem] w-[18rem]">
       <div className="flex lg:flex-row flex-col gap-1">
         <Label htmlFor={name} className="mb-1 flex items-center gap-1 w-[6rem]">
           {label}
-          <a href="https://wa.me/201223907739" target="_blank">
+          <a href={`https://wa.me/${phone}`} target="_blank">
             <WhatsAppIcon />
           </a>
         </Label>

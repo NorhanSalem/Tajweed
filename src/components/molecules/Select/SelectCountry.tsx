@@ -14,6 +14,7 @@ type SelectCountry_tp = {
   fieldKey?: any;
   placeholder?: string;
   style?: string;
+  labelCss?: string;
 };
 export default function SelectCountry({
   setStatus,
@@ -25,6 +26,7 @@ export default function SelectCountry({
   placeholder,
   label,
   style,
+  labelCss,
 }: SelectCountry_tp) {
   const {
     data: NationalityOptions,
@@ -59,6 +61,7 @@ export default function SelectCountry({
         options={dataOptions}
         onChange={onChange}
         style={style}
+        labelCss={labelCss}
       />
     </div>
   );

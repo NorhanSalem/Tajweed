@@ -168,11 +168,11 @@ export default function DateInput2({
           customInput={
             <input
               style={{
-                width: "30vw", // Takes up 90% of the viewport width
+                width: "100%", // Takes full available width
               }}
             />
           }
-        />
+        ></DatePicker>
       </div>
       <FormikError name={name} />
     </div>

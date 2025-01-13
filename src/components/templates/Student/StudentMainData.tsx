@@ -31,7 +31,7 @@ export const StudentMainData = ({ hideHeader }: any) => {
               type="text"
               placeholder={`${t("name")}`}
               labelProps={{ className: "mb-1 " }}
-              className="mb-3"
+              className=" mb-3 lg:inline-block lg:w-full lg:ml-[-1.5rem]  w-[18rem]"
               required
             />
             <DateInput2 label={`${t("BirthDay")}`} name="birthday" />
@@ -41,7 +41,7 @@ export const StudentMainData = ({ hideHeader }: any) => {
               onChange={(option) => {
                 setFieldValue("gender", option.value);
               }}
-              style="lg:ml-6 lg:w-[27rem]"
+              style="lg:ml-8 lg:w-[40rem]  w-[18rem] xl:w-[55rem] md:block"
             />
             <SelectCanTeaching
               placeholder={t("I want to learn")}
@@ -53,7 +53,7 @@ export const StudentMainData = ({ hideHeader }: any) => {
                 );
                 setFieldValue("preferred_learning", selectedIds);
               }}
-              style="lg:ml-5 lg:w-[27rem]"
+              style="lg:ml-2 lg:w-[27rem]  w-[18rem] xl:w-[55rem] md:block"
             />
             <SelectDataPreferredDays
               label={t("preferred days")}
@@ -64,7 +64,7 @@ export const StudentMainData = ({ hideHeader }: any) => {
                 );
                 setFieldValue("preferred_days", selectedIds);
               }}
-              style="lg:ml-5 lg:w-[27rem]"
+              style="lg:ml-8 lg:w-[27rem]  w-[18rem] xl:w-[55rem] md:block"
             />
             <SelectCountry
               name="country_id"
@@ -72,7 +72,7 @@ export const StudentMainData = ({ hideHeader }: any) => {
               onChange={(option) => {
                 setFieldValue("country_id", option.value);
               }}
-              style="lg:ml-5 lg:w-[27rem]"
+              style="lg:ml-8 lg:w-[27rem]  w-[18rem] xl:w-[55rem] md:block"
             />
 
             <PhoneInput2 label={`${t("mobile")}`} name="phone" />
@@ -83,6 +83,7 @@ export const StudentMainData = ({ hideHeader }: any) => {
               type="email"
               placeholder={`${t("email")}`}
               labelProps={{ className: "mb-1" }}
+              className="inline-block lg:w-full  w-[18rem]"
             />
             <BaseInputField
               id="password"
@@ -92,6 +93,7 @@ export const StudentMainData = ({ hideHeader }: any) => {
               placeholder={`${t("password")}`}
               labelProps={{ className: "mb-1" }}
               labelStyle="lg:w-[5rem]"
+              className="inline-block lg:w-full  w-[18rem]"
               required
             />
             <BaseInputField
@@ -101,6 +103,7 @@ export const StudentMainData = ({ hideHeader }: any) => {
               type="password"
               placeholder={`${t("password")}`}
               labelProps={{ className: "mb-1" }}
+              className="inline-block lg:w-full  w-[18rem]"
               required
             />
             <BaseInputField
@@ -111,6 +114,7 @@ export const StudentMainData = ({ hideHeader }: any) => {
               placeholder={`${t("Number Student")}`}
               labelProps={{ className: "mb-1" }}
               labelStyle="w-[5rem]"
+              className="inline-block lg:w-full  w-[18rem]"
               required
             />
             <div>
